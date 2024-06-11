@@ -4,7 +4,6 @@ import HomeSection from "./home/HomeSection";
 import HomeEdition from "./home/HomeEdition";
 import HomeResidences from "./home/HomeResidences";
 import Line from "@/components/ComponentsLine";
-import VideoPlayer from "./home/components/VideoPlayer";
 import HomeHeader from "./home/HomeHeader";
 
 const Home = () => {
