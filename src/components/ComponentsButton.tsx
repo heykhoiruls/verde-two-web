@@ -6,11 +6,13 @@ const Button = ({
   text,
   onClick,
   variant = "primary",
+  disabled = false,
 }: {
   route?: string | (() => void);
   text?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   variant?: "primary" | "secondary" | "danger" | "ghost";
+  disabled?: boolean;
 }) => {
   let buttonClassName =
     "bg-primary-app text-white hover:text-white font-bold py-4 px-8 rounded-tl-lg rounded-br-lg transition duration-300 ";
@@ -25,9 +27,17 @@ const Button = ({
       "bg-color hover:bg-primary-app hover:text-white font-bold py-4 px-8 rounded-tl-lg rounded-br-lg transition duration-300";
   }
 
+  if (disabled) {
+    buttonClassName += " opacity-50 cursor-not-allowed";
+  }
+
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
+    if (disabled) {
+      event.preventDefault();
+      return;
+    }
     if (typeof route === "function") {
       event.preventDefault();
       route();
@@ -39,6 +49,7 @@ const Button = ({
       <button
         onClick={onClick ? onClick : handleClick}
         className={buttonClassName}
+        disabled={disabled}
       >
         {text}
       </button>

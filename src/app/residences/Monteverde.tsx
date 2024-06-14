@@ -37,13 +37,13 @@ const Monteverde = () => {
   }, [images.length]);
 
   return (
-    <div className="flex h-screen">
+    <div className="bg-color flex h-screen">
       <div className="hidden items-center justify-center px-10 lg:flex">
         <div className="w-96 rounded-xl bg-neutral-200 p-8">
           <p>{subTitle}</p>
           <h2>{title}</h2>
           <p className="py-10">{text}</p>
-          <Button variant="ghost" text="View More" route={"/monteverde"} />
+          <Button variant="ghost" text="View More" route={"/leasing"} />
         </div>
       </div>
       <div className="relative flex h-full w-full items-center justify-center">

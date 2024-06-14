@@ -50,18 +50,20 @@ const Neighborhood = () => {
     <div className="relative h-screen">
       <div className="absolute inset-0">
         <MapBackground selectedCategory={selectedCategory} />
-        {/* phone view */}
-        <div className="pointer-events-none absolute top-1/2 block h-full w-full -translate-y-1/2 transform items-center justify-between text-white md:hidden">
-          <div className="pointer-events-auto mx-4 mt-24 rounded-3xl bg-neutral-200">
-            <div className="grid grid-cols-5">
-              {neighborhoodIcons.map(({ label, icon }, index) => (
-                <NeighborhoodIcon
-                  key={index}
-                  icon={icon}
-                  onClick={() => handleCategoryChange(label)}
-                  selected={selectedCategory === label}
-                />
-              ))}
+        {/* mobile view */}
+        <div className="flex w-full justify-end">
+          <div className="pointer-events-none absolute top-1/2 block h-full w-full max-w-lg -translate-y-1/2 transform items-center justify-between text-white lg:hidden">
+            <div className="pointer-events-auto mx-4 mt-24 rounded-3xl bg-neutral-200">
+              <div className="grid grid-cols-5">
+                {neighborhoodIcons.map(({ label, icon }, index) => (
+                  <NeighborhoodIcon
+                    key={index}
+                    icon={icon}
+                    onClick={() => handleCategoryChange(label)}
+                    selected={selectedCategory === label}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

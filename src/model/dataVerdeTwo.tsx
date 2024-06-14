@@ -164,7 +164,7 @@ export const listOutdoor = [
   },
   {
     key: "chefs_kitchen_and_lounge",
-    title: "Chef's Kitchen",
+    title: "Chef's Kitchen & Lounge",
     image:
       "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/amenities-chef-kitchen.jpg",
     description:

@@ -28,7 +28,7 @@ const Residences = () => {
         />
       </Banner>
       <Terraverde />
-      <Line width="w-1/2 my-6" />
+      <Line width="w-1/2 my-6 bg-color" />
       <Monteverde />
     </main>
   );

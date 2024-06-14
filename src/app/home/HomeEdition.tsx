@@ -3,7 +3,7 @@ import ParallaxLogo from "./components/ParallaxLogo";
 
 const HomeEdition = () => {
   return (
-    <div className="h-[100vh] space-y-6">
+    <div className="bg-color h-[100vh] space-y-6">
       <div className="container top-0 space-y-2 pb-4 md:px-[100px]">
         <p>With our collective efforts and determination,</p>
         <h2>lets realize anything you want.</h2>

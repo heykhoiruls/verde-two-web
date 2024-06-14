@@ -20,28 +20,26 @@ const ParallaxImage: React.FC<ParallaxProps> = ({}) => {
   return (
     <div>
       <div className="parallax">
-        <Link href={"/edition"}>
-          <motion.div
-            className="scroller space-x-4"
-            animate={{
-              x: [0, -containerWidth],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 60,
-              ease: "linear",
-            }}
-          >
-            {clonedImages.map((src, index) => (
-              <motion.img
-                key={index}
-                src={src}
-                className="h-[400px] rounded-l-xl rounded-br-xl"
-                alt={`Partner ${index + 1}`}
-              />
-            ))}
-          </motion.div>
-        </Link>
+        <motion.div
+          className="scroller space-x-4"
+          animate={{
+            x: [0, -containerWidth],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 60,
+            ease: "linear",
+          }}
+        >
+          {clonedImages.map((src, index) => (
+            <motion.img
+              key={index}
+              src={src}
+              className="h-[400px] rounded-l-xl rounded-br-xl"
+              alt={`Partner ${index + 1}`}
+            />
+          ))}
+        </motion.div>
       </div>
     </div>
   );

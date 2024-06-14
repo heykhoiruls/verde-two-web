@@ -43,7 +43,7 @@ const CallActionButton = () => {
       <div className="pointer-events-auto flex items-center rounded-full bg-black bg-opacity-35 p-2 text-white backdrop-blur-sm backdrop-filter">
         <DirectionButton />
 
-        <p className="px-5 text-sm lg:text-base">Inquire now</p>
+        <p className="px-5 text-sm">Inquire now</p>
         <div className="bg-color-primary flex items-center rounded-full">
           {SocialData.map((item, index) => (
             <SocialButton key={index} href={item.link} src={item.logo} />

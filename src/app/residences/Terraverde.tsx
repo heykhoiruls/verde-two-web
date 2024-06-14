@@ -36,7 +36,7 @@ const Terraverde = () => {
     return () => clearInterval(interval);
   }, [images.length]);
   return (
-    <div className="flex h-screen">
+    <div className="bg-color flex h-screen">
       <div className="relative flex h-full w-full items-center justify-center">
         {images.map((image, index) => (
           <motion.img
@@ -47,6 +47,8 @@ const Terraverde = () => {
             style={{
               opacity: index === imageIndex ? 1 : 0,
               transition: "opacity 0.5s ease-in-out",
+              objectFit: "cover",
+              objectPosition: index === 1 ? "center 50% right" : "center",
             }}
           />
         ))}
@@ -71,7 +73,7 @@ const Terraverde = () => {
           <p>{subTitle}</p>
           <h2>{title}</h2>
           <p className="py-10">{text}</p>
-          <Button variant="ghost" text="View More" route={"/terraverde"} />
+          <Button variant="ghost" text="View More" route={"/leasing"} />
         </div>
       </div>
     </div>

@@ -49,7 +49,7 @@ const Footer = () => {
             />
           </div>
           <div className="flex w-full lg:justify-end">
-            <p className="w-3/4">
+            <p className="w-3/4 text-xs">
               © 2024 Copyright VERDE TWO Modern Luxurious Apartment in Jakarta
               CBD, All rights reserved.
             </p>

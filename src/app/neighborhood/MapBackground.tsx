@@ -12,7 +12,7 @@ const MapBackground = ({ selectedCategory }) => {
 
   // Detect if the view is mobile
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
     setIsMobile(mediaQuery.matches);
 
     const handleResize = () => setIsMobile(mediaQuery.matches);
