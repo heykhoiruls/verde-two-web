@@ -24,7 +24,7 @@ const HomeHeader = () => {
   };
 
   return (
-    <div className="relative h-screen w-screen">
+    <div className="relative h-dvh w-screen">
       <AnimatePresence initial={false}>
         {images.map(
           (image, index) =>
