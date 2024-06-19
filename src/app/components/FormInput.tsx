@@ -1,8 +1,14 @@
 "use client";
-import Button from "@/components/ComponentsButton";
+
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/firebase.js";
+
+// Importing Button dynamically to disable SSR for this component
+const Button = dynamic(() => import("@/components/ComponentsButton"), {
+  ssr: false,
+});
 
 const FormInput = () => {
   const [email, setEmail] = useState("");
@@ -27,7 +33,9 @@ const FormInput = () => {
       setEmail("");
       const pdfUrl =
         "https://firebasestorage.googleapis.com/v0/b/verde-two-web.appspot.com/o/E-Booklet%20Verde%20Two%202020.pdf?alt=media&token=3cffaa57-0edb-4e62-b5dc-422634f52934";
-      window.open(pdfUrl, "_blank");
+      if (typeof window !== "undefined") {
+        window.open(pdfUrl, "_blank");
+      }
     }
   };
 
