@@ -1,8 +1,8 @@
 "use client";
 
-import Heading1 from "../../components/ComponentsHeading1";
+import Heading1 from "@/components/ComponentsHeading1";
 import { motion, AnimatePresence } from "framer-motion";
-import ComponentsInput from "../../components/ComponentsInput";
+import ComponentsInput from "@/components/ComponentsInput";
 
 const Contact = () => {
   return (
@@ -33,7 +33,7 @@ const Contact = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <motion.img
-              src="https://ik.imagekit.io/heykhoiruuuls/public/photos/home/home-hero-4.png"
+              src="https://ik.imagekit.io/heykhoiruuuls/public/photos/home/home-hero-3.png"
               alt=""
               className="rounded-t-[16px] object-cover lg:w-full"
               initial={{ y: 50, opacity: 0 }}

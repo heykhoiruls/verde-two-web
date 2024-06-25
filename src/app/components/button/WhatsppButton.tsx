@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ComponentsNavBottom from "@/components/ComponentsNavBottom";
 import React, { useEffect } from "react";
 
 const WhatsAppButton = () => {
@@ -27,14 +27,7 @@ const WhatsAppButton = () => {
 
   return (
     <button id="whatsappButton">
-      <Image
-        src="https://ik.imagekit.io/heykhoiruuuls/public/logos/whatsapp.svg"
-        alt=""
-        loading="lazy"
-        className="h-12"
-        width={48}
-        height={48}
-      />
+      <ComponentsNavBottom src="/logos/whatsapp.svg" />
     </button>
   );
 };

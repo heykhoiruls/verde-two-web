@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect } from "react";
+import ComponentsNavBottom from "../../../components/ComponentsNavBottom";
 
 const DirectionButton = () => {
   useEffect(() => {
@@ -38,14 +38,7 @@ const DirectionButton = () => {
 
   return (
     <button id="directionButton">
-      <Image
-        src="https://ik.imagekit.io/heykhoiruuuls/public/logos/direction.svg"
-        alt=""
-        loading="lazy"
-        className="h-12"
-        width={48}
-        height={48}
-      />
+      <ComponentsNavBottom src="/logos/direction.svg" />
     </button>
   );
 };

@@ -52,8 +52,8 @@ const HomeHeader = () => {
       >
         <div className="absolute flex h-full w-full flex-col justify-between px-4 py-28 text-white md:px-24">
           <div>
-            <h1 className="text-4xl md:text-6xl">A Brilliant Move</h1>
-            <p className="mt-2 px-4 md:p-0 md:text-xl">
+            <h1 className="text-2xl md:text-4xl">A Brilliant Move</h1>
+            <p className="mt-2 px-4 md:p-0 md:text-lg">
               Discover the differences that set Verde Two apart from the rest
             </p>
           </div>

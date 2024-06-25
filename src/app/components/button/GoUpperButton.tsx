@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import ComponentsNavBottom from "@/components/ComponentsNavBottom";
 import React, { useEffect } from "react";
 
 const GoUpperButton = () => {
@@ -22,14 +22,7 @@ const GoUpperButton = () => {
 
   return (
     <button id="arrow_up">
-      <Image
-        src="https://ik.imagekit.io/heykhoiruuuls/public/logos/arrow-up.svg"
-        loading="lazy"
-        alt=""
-        className="h-12"
-        width={48}
-        height={48}
-      />
+      <ComponentsNavBottom src="/logos/arrow-up.svg" />
     </button>
   );
 };

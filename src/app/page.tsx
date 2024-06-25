@@ -3,6 +3,7 @@ import HomeEdition from "./home/HomeEdition";
 import HomeResidences from "./home/HomeResidences";
 import Line from "@/components/ComponentsLine";
 import HomeHeader from "./home/HomeHeader";
+import HomeCampaign from "./home/HomeCampaign";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <HomeHeader />
       <Line width="my-6 w-1/4" />
       <HomeResidences />
+      <HomeCampaign />
       <Line width="my-6 w-1/4" />
       <HomeEdition />
       <div className="bg-color h-8 w-full rounded-bl-2xl rounded-br-2xl"></div>

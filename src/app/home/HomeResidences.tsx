@@ -21,7 +21,7 @@ const HomeResidences = () => {
   return (
     <div className="bg-color flex h-[80vh] w-full flex-col space-y-1 md:flex-row md:space-x-2 md:space-y-0">
       {residences.map((residence, index) => (
-        <div key={index} className="relative  h-full w-full ">
+        <div key={index} className="relative h-full w-full ">
           <Link href={residence.href}>
             <Image
               src={residence.src}

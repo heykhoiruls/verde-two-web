@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
+import ComponentsNavBottom from "../../../components/ComponentsNavBottom";
 
 const motionVariants = {
   open: {
@@ -55,7 +56,7 @@ const NavbarButton = ({
 }) => {
   return (
     <button onClick={onClick} aria-label={alt}>
-      <Image src={src} className={className} alt={alt} width={50} height={50} />
+      <Image src={src} className={className} alt={alt} width={56} height={56} />
     </button>
   );
 };
@@ -100,11 +101,11 @@ const Navbar = () => {
               "https://ik.imagekit.io/heykhoiruuuls/public/logos/verde-two-active.svg"
             }
             alt={"alt"}
-            width={50}
-            height={50}
+            width={64}
+            height={64}
           />
         </Link>
-        <div className="hidden space-x-6 pe-5 md:flex">
+        <div className="hidden space-x-6 pe-5 text-sm md:flex">
           {links.map((link, index) => (
             <NavbarLink key={index} href={link.href} label={link.label} />
           ))}
@@ -112,10 +113,10 @@ const Navbar = () => {
         <div className="block md:hidden">
           <NavbarButton
             onClick={toggleBurgerMenu}
-            className="h-6 px-4 md:h-8"
+            className="flex h-6 items-center px-4 md:h-8"
             src={
               burgerMenuActive
-                ? "https://ik.imagekit.io/heykhoiruuuls/public//icons/close.svg"
+                ? "https://ik.imagekit.io/heykhoiruuuls/public/icons/close.svg"
                 : "https://ik.imagekit.io/heykhoiruuuls/public/icons/menu.svg"
             }
             alt={burgerMenuActive ? "Close menu" : "Open menu"}

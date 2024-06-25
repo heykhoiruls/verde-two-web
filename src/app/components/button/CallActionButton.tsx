@@ -1,33 +1,25 @@
 "use client";
-import Link from "next/link";
 import DirectionButton from "./DirectionButton";
 import WhatsAppButton from "./WhatsppButton";
 import { motion } from "framer-motion";
 import GoUpperButton from "./GoUpperButton";
-import Image from "next/image";
+import ComponentsNavBottom from "@/components/ComponentsNavBottom";
 
 const SocialData = [
   {
     link: "https://www.youtube.com/channel/UCKA0OBv14C6pSNpb3pcNNOA",
-    logo: "https://ik.imagekit.io/heykhoiruuuls/public/logos/youtube.svg",
+    logo: "logos/youtube.svg",
   },
   {
     link: "https://www.instagram.com",
-    logo: "https://ik.imagekit.io/heykhoiruuuls/public/logos/instagram.svg",
+    logo: "logos/instagram.svg",
   },
 ];
 
 const SocialButton = ({ href, src }: { href: string; src: string }) => {
   return (
     <a href={href}>
-      <Image
-        src={src}
-        loading="lazy"
-        alt=""
-        className="h-12"
-        width={48}
-        height={48}
-      />
+      <ComponentsNavBottom src={src} />
     </a>
   );
 };
@@ -41,10 +33,15 @@ const CallActionButton = () => {
       className="pointer-events-none fixed inset-x-0 bottom-4 z-[9999] flex items-center justify-center"
     >
       <div className="pointer-events-auto flex items-center rounded-full bg-black bg-opacity-35 p-2 text-white backdrop-blur-sm backdrop-filter">
-        <DirectionButton />
+        <div className="hidden items-center md:flex">
+          <DirectionButton />
+          <p className="px-5 text-sm">Inquire now</p>
+        </div>
 
-        <p className="px-5 text-sm">Inquire now</p>
         <div className="bg-color-primary flex items-center rounded-full">
+          <div className="flex items-center md:hidden">
+            <DirectionButton />
+          </div>
           {SocialData.map((item, index) => (
             <SocialButton key={index} href={item.link} src={item.logo} />
           ))}
