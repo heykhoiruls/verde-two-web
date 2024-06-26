@@ -6,10 +6,11 @@ import { Component } from "react";
 
 const HomeHeader = () => {
   const images = [
-    "photos/monteverde/monteverde-1.jpg",
-    "photos/monteverde/monteverde-2.jpg",
     "photos/monteverde/monteverde-3.jpg",
-    "photos/monteverde/monteverde-4.jpg",
+    "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/header-amenities.jpg",
+    "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/amenities-terraverde-lobby.jpg",
+    "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/amenities-cigar-room.jpg",
+    "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/amenities-games-room.jpg",
   ];
 
   const [imageIndex, setImageIndex] = useState(0);

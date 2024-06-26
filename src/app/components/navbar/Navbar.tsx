@@ -90,27 +90,27 @@ const Navbar = () => {
         transition: "background-image 10s ease-in-out",
       }}
       className={classNames(
-        "pointer-events-none fixed inset-x-0 z-50 flex flex-col items-center px-4 pt-4",
-        { "h-full": burgerMenuActive },
+        "pointer-events-none fixed inset-x-0 z-50 flex flex-col items-center justify-center px-4 pt-4",
+        { "h-full": burgerMenuActive, "h-20": !burgerMenuActive },
       )}
     >
-      <div className="pointer-events-auto flex w-full items-center justify-between rounded-full bg-stone-900 bg-opacity-35 p-2 px-4 text-white backdrop-blur-sm backdrop-filter lg:w-3/4">
+      <div className="pointer-events-auto flex w-full items-center justify-between text-white lg:w-3/4">
         <Link href="/">
           <Image
             src={
               "https://ik.imagekit.io/heykhoiruuuls/public/logos/verde-two-active.svg"
             }
             alt={"alt"}
-            width={64}
-            height={64}
+            width={75}
+            height={75}
           />
         </Link>
-        <div className="hidden space-x-6 pe-5 text-sm md:flex">
+        <div className="hidden h-full items-center space-x-6 rounded-full bg-stone-900 bg-opacity-35 p-2 px-8 pe-5 text-sm backdrop-blur-sm backdrop-filter md:flex">
           {links.map((link, index) => (
             <NavbarLink key={index} href={link.href} label={link.label} />
           ))}
         </div>
-        <div className="block md:hidden">
+        <div className="flex h-20 items-center rounded-full bg-stone-900 bg-opacity-35 backdrop-blur-sm backdrop-filter md:hidden">
           <NavbarButton
             onClick={toggleBurgerMenu}
             className="flex h-6 items-center px-4 md:h-8"

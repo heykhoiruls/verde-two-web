@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { data } from "../../data/leasing";
 import CarouselNavigation from "../../components/ComponentsCarouselNavigation";
 import Image from "next/image";
+import Modal from "./ModalPageUnit";
 
 const Icon = ({
   src,
@@ -22,6 +23,7 @@ const Icon = ({
 
 const UnitsCard = ({ unit }: { unit: any }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextImage = () => {
     setSelectedImageIndex((prevIndex) => (prevIndex + 1) % unit.image.length);
@@ -33,12 +35,31 @@ const UnitsCard = ({ unit }: { unit: any }) => {
     );
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="relative h-[90vh] rounded-2xl shadow-lg">
       <img
         src={unit.image[selectedImageIndex]}
-        className="h-3/4 w-full rounded-2xl object-cover"
+        className="h-3/4 w-full cursor-pointer rounded-2xl object-cover"
         alt="Unit Layout"
+        onClick={openModal}
+      />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        imageSrc={unit.image[selectedImageIndex]}
+      />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        imageSrc={unit.image[selectedImageIndex]}
       />
       <div className="absolute bottom-48 w-full justify-between px-4">
         <CarouselNavigation
