@@ -105,7 +105,7 @@ const Navbar = () => {
             height={75}
           />
         </Link>
-        <div className="hidden h-full items-center space-x-6 rounded-full bg-stone-900 bg-opacity-35 p-2 px-8 pe-5 text-sm backdrop-blur-sm backdrop-filter md:flex">
+        <div className="hidden h-full items-center space-x-6 rounded-full bg-stone-900 bg-opacity-35 px-8 text-sm backdrop-blur-sm backdrop-filter md:flex">
           {links.map((link, index) => (
             <NavbarLink key={index} href={link.href} label={link.label} />
           ))}

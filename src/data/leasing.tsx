@@ -30,7 +30,13 @@ export const data = [
   },
   {
     type: "TYPE B2",
-    image: ["/photos/terraverde/terraverde-3.jpg", "/layouts/layout-b2.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/4.jpg",
+      "/layouts/layout-b2.png",
+    ],
 
     layout: "/layouts/layout-b2.png",
     mini: "/layouts/layout-mini-b2.png",
@@ -73,7 +79,13 @@ export const data = [
   },
   {
     type: "TYPE A3",
-    image: ["/photos/terraverde/terraverde-2.jpg", "/layouts/layout-a3.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/4.jpg",
+      "/layouts/layout-a3.png",
+    ],
 
     layout: "/layouts/layout-a3.png",
     mini: "/layouts/layout-mini-a3.png",
@@ -87,7 +99,13 @@ export const data = [
   },
   {
     type: "TYPE A4",
-    image: ["/photos/terraverde/terraverde-3.jpg", "/layouts/layout-a4.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A4/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A4/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A4/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A4/4.jpg",
+      "/layouts/layout-a4.png",
+    ],
 
     layout: "/layouts/layout-a4.png",
     mini: "/layouts/layout-mini-a4.png",
