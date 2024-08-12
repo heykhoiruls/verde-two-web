@@ -23,13 +23,7 @@ const HomeResidences = () => {
       {residences.map((residence, index) => (
         <div key={index} className="relative h-full w-full ">
           <Link href={residence.href}>
-            <Image
-              src={residence.src}
-              alt=""
-              fill
-              objectFit="cover"
-              className="h-full w-full"
-            />
+            <Image src={residence.src} alt="" fill className="h-full w-full" />
             <div className="top absolute flex h-full w-full flex-col items-center bg-gradient-to-t from-transparent via-transparent to-black pt-8 text-white transition-opacity duration-300 hover:opacity-0 md:pt-20">
               <p className="md:text-md text-md">{residence.description}</p>
               <h1 className="text-xl md:text-3xl">{residence.title}</h1>

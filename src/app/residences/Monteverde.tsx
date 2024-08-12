@@ -19,6 +19,7 @@ const Monteverde = () => {
     "https://ik.imagekit.io/heykhoiruuuls/public/photos/monteverde/monteverde-4.jpg",
   ];
   const [imageIndex, setImageIndex] = useState(0);
+
   const nextImage = () => {
     setImageIndex((prevImage) => (prevImage + 1) % images.length);
   };
@@ -29,12 +30,58 @@ const Monteverde = () => {
     );
   };
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 10000);
+  //   return () => clearInterval(interval);
+  // }, [images.length]);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+    let startX = 0;
+    let endX = 0;
+
+    const handleGestureStart = (e: TouchEvent | MouseEvent) => {
+      startX = e instanceof TouchEvent ? e.touches[0].clientX : e.clientX;
+    };
+
+    const handleGestureMove = (e: TouchEvent | MouseEvent) => {
+      endX = e instanceof TouchEvent ? e.touches[0].clientX : e.clientX;
+    };
+
+    const handleGestureEnd = () => {
+      if (startX > endX + 10) {
+        nextImage();
+      } else if (startX < endX - 10) {
+        prevImage();
+      }
+    };
+
+    const imageContainer = document.getElementById("imageCarousel");
+    if (imageContainer) {
+      imageContainer.addEventListener("touchstart", handleGestureStart);
+      imageContainer.addEventListener("touchmove", handleGestureMove);
+      imageContainer.addEventListener("touchend", handleGestureEnd);
+
+      imageContainer.addEventListener("mousedown", handleGestureStart);
+      imageContainer.addEventListener("mousemove", handleGestureMove);
+      imageContainer.addEventListener("mouseup", handleGestureEnd);
+      imageContainer.addEventListener("mouseleave", handleGestureEnd);
+    }
+
+    return () => {
+      if (imageContainer) {
+        imageContainer.removeEventListener("touchstart", handleGestureStart);
+        imageContainer.removeEventListener("touchmove", handleGestureMove);
+        imageContainer.removeEventListener("touchend", handleGestureEnd);
+
+        imageContainer.removeEventListener("mousedown", handleGestureStart);
+        imageContainer.removeEventListener("mousemove", handleGestureMove);
+        imageContainer.removeEventListener("mouseup", handleGestureEnd);
+        imageContainer.removeEventListener("mouseleave", handleGestureEnd);
+      }
+    };
+  }, [nextImage, prevImage]);
 
   return (
     <div className="bg-color flex h-screen">
@@ -46,7 +93,10 @@ const Monteverde = () => {
           <Button variant="ghost" text="View More" route={"/leasing"} />
         </div>
       </div>
-      <div className="relative flex h-full w-full items-center justify-center">
+      <div
+        id="imageCarousel"
+        className="relative flex h-full w-full items-center justify-center"
+      >
         {images.map((image, index) => (
           <motion.img
             key={index}

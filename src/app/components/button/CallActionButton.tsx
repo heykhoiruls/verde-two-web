@@ -11,7 +11,7 @@ const SocialData = [
     logo: "logos/youtube.svg",
   },
   {
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/verdetwo/",
     logo: "logos/instagram.svg",
   },
 ];

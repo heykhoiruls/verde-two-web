@@ -30,11 +30,11 @@ const Footer = () => {
         >
           <div className={`flex justify-start space-x-5 lg:justify-end`}>
             <FooterIcon
-              link=""
+              link="https://web.facebook.com/verdetwoapartment"
               source="https://ik.imagekit.io/heykhoiruuuls/public/logos/footer/facebook.svg"
             />
             <FooterIcon
-              link=""
+              link="https://www.instagram.com/verdetwo/"
               source="https://ik.imagekit.io/heykhoiruuuls/public/logos/footer/instagram.svg"
             />
           </div>
