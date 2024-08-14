@@ -192,7 +192,7 @@ export const listOutdoor = [
     image:
       "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/amenities-rpm.jpg",
     description:
-      "Your couture home at VERDE TWO begins at the exquisitely designed Grand Entrance Lobby by master class designer, Yabu Pushelberg. Cladded from floor to ceiling in classic and luxurious marbles, decked in plush European designers’ sofas framed by artisanal batik inspired bronze screens, the grand lobby exudes simple sophistication, engineered elegance n decorative brilliance.",
+      "Experience high-energy cycling like never before at the RPM Studio. Designed for the ultimate fitness enthusiast, this studio features cutting-edge stationary bikes and a dynamic sound system that transforms every workout into an exhilarating journey. ",
   },
   {
     key: "pilates_studio",
@@ -200,7 +200,7 @@ export const listOutdoor = [
     image:
       "https://ik.imagekit.io/heykhoiruuuls/public/photos/amenities/amenities-pilates.jpg",
     description:
-      "Your couture home at VERDE TWO begins at the exquisitely designed Grand Entrance Lobby by master class designer, Yabu Pushelberg. Cladded from floor to ceiling in classic and luxurious marbles, decked in plush European designers’ sofas framed by artisanal batik inspired bronze screens, the grand lobby exudes simple sophistication, engineered elegance n decorative brilliance.",
+      "Step into the Pilates Studio at Verde Two, a sanctuary designed for wellness and tranquility. The studio is equipped with state-of-the-art Pilates machines and mats, providing the perfect environment for both beginners and seasoned practitioners.",
   },
 ];
 

@@ -281,3 +281,12 @@
     margin-left: calc(var(--slide-spacing) * -1);
   }
 }
+
+.vfrc-widget {
+  right: 100px;
+}
+
+.vfrc-widget button {
+  border-radius: unset;
+  background-color: red;
+}

@@ -2,7 +2,13 @@ export const data = [
   // Monteverde C1 - C4
   {
     type: "TYPE C4",
-    image: ["/photos/monteverde/monteverde-1.jpg", "/layouts/layout-c4.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20C1/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20C1/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20C1/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20C1/4.jpg",
+      "/layouts/layout-c4.png",
+    ],
 
     layout: "/layouts/layout-c4.png",
     mini: "/layouts/layout-mini-c4.png",
@@ -17,7 +23,13 @@ export const data = [
   // Terraverde B1 - B2
   {
     type: "TYPE B1",
-    image: ["/photos/terraverde/terraverde-2.jpg", "/layouts/layout-b1.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B1/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B1/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B1/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B1/4.jpg",
+      "/layouts/layout-b1.png",
+    ],
     layout: "/layouts/layout-b1.png",
     mini: "/layouts/layout-mini-b1.png",
     position: "CORNER TERRAVERDE TOWER",
@@ -31,10 +43,10 @@ export const data = [
   {
     type: "TYPE B2",
     image: [
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/1.jpg",
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/2.jpg",
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/3.jpg",
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/4.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/1.jpg?updatedAt=1723621617259",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/2.jpg?updatedAt=1723621617259",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/3.jpg?updatedAt=1723621617259",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/3BR/Type%20B2/4.jpg?updatedAt=1723621617259",
       "/layouts/layout-b2.png",
     ],
 
@@ -51,7 +63,13 @@ export const data = [
   // Terraverde A1 - A4
   {
     type: "TYPE A1",
-    image: ["/photos/terraverde/terraverde-4.jpg", "/layouts/layout-a1.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A1/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A1/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A1/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A1/4.jpg",
+      "/layouts/layout-a1.png",
+    ],
 
     layout: "/layouts/layout-a1.png",
     mini: "/layouts/layout-mini-a1.png",
@@ -65,7 +83,13 @@ export const data = [
   },
   {
     type: "TYPE A2",
-    image: ["/photos/terraverde/terraverde-1.jpg", "/layouts/layout-a2.png"],
+    image: [
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A2/1.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A2/2.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A2/3.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A2/4.jpg",
+      "/layouts/layout-a2.png",
+    ],
 
     layout: "/layouts/layout-a2.png",
     mini: "/layouts/layout-mini-a2.png",
@@ -80,10 +104,10 @@ export const data = [
   {
     type: "TYPE A3",
     image: [
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/1.jpg",
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/2.jpg",
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/3.jpg",
-      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/4.jpg",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/1.jpg?updatedAt=1723620112636",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/2.jpg?updatedAt=1723620112636",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/3.jpg?updatedAt=1723620112636",
+      "https://ik.imagekit.io/heykhoiruuuls/public/photos/leasing/2BR/Type%20A3/4.jpg?updatedAt=1723620112636",
       "/layouts/layout-a3.png",
     ],
 

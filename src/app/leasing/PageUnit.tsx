@@ -76,8 +76,8 @@ const UnitsCard = ({ unit }: { unit: any }) => {
             <p className="text-xs">{unit.position}</p>
           </div>
           <div>
-            <p className="text-xs">Mulai dari</p>
-            <p className="text-base font-bold">USD {unit.price}</p>
+            {/* <p className="text-xs">Mulai dari</p>
+            <p className="text-base font-bold">USD {unit.price}</p> */}
           </div>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 gap-2 bg-stone-200 px-6 py-6">
