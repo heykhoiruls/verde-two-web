@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ["ik.imagekit.io"],
     unoptimized: true,
   },
-  output: "export",
+
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -12,6 +12,20 @@ const nextConfig = {
     });
 
     return config;
+  },
+  async redirects() {
+    return [
+      {
+        source: "/events/five-star-living-at-verde-two",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/inquiry",
+        destination: "/contact",
+        permanent: true,
+      },
+    ];
   },
 };
 
