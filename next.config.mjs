@@ -25,6 +25,11 @@ const nextConfig = {
         destination: "/contact",
         permanent: true,
       },
+      {
+        source: "/leasing-2-bedroom",
+        destination: "/leasing",
+        permanent: true,
+      },
     ];
   },
 };
