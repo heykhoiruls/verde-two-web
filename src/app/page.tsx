@@ -1,20 +1,16 @@
-"use client";
-import HomeEdition from "./home/HomeEdition";
-import HomeResidences from "./home/HomeResidences";
-import Line from "@/components/ComponentsLine";
-import HomeHeader from "./home/HomeHeader";
-import HomeCampaign from "./home/HomeCampaign";
+import { Metadata } from "next";
+import PageHome from "./home/PageHome";
+
+export const metadata: Metadata = {
+  title: "Five-Star Living at Verde Two",
+  description:
+    "For leasing information, please contact us. Elegant and luxury living experience in Jakarta",
+};
 
 const Home = () => {
   return (
     <main>
-      <HomeHeader />
-      <Line width="my-6 w-1/4" />
-      <HomeResidences />
-      <HomeCampaign />
-      <Line width="my-6 w-1/4" />
-      <HomeEdition />
-      <div className="bg-color h-8 w-full rounded-bl-2xl rounded-br-2xl"></div>
+      <PageHome />
     </main>
   );
 };

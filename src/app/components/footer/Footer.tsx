@@ -4,6 +4,7 @@ import FormInput from "../FormInput";
 import ComponentsHeading4 from "@/components/ComponentsHeading4";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -40,10 +41,12 @@ const Footer = () => {
           </div>
           <div className={`flex justify-start space-x-5 lg:justify-end`}>
             <FooterLogo
+              href="https://www.cushmanwakefield.com/en/indonesia"
               source="https://ik.imagekit.io/heykhoiruuuls/public/logos/footer/cushman.svg"
               text="A property management by"
             />
             <FooterLogo
+              href="https://farpoint.co.id/"
               source="https://ik.imagekit.io/heykhoiruuuls/public/logos/footer/farpoint-asia.svg"
               text="A premium development by"
             />
@@ -72,22 +75,42 @@ const FooterIcon = ({ source, link }: { source: string; link: string }) => {
 const FooterAddress = () => {
   return (
     <div className="pt-8">
-      <p>T. +62 877-8118-1180</p>
-      <p className="pt-2">E. info@verdetwo.com</p>
+      <p>
+        T. <Link href={"https://wa.me/6287781181180"}>+62 877-8118-1180</Link>
+      </p>
+      <p className="pt-2">
+        E. <Link href={"mailto:info@verdetwo.com"}>info@verdetwo.com</Link>
+      </p>
       <p className="pt-2 sm:max-w-[25vw]">
-        Jl. Kuningan Mulia Boulevard, Kuningan Setiabudi, Jakarta 12940
-        Indonesia
+        <Link
+          href={
+            "https://www.google.com/maps/@-6.2136861,106.8339735,3a,75y,135.04h,103.17t/data=!3m7!1e1!3m5!1sulH6fcEvZUCxOnDQnGWAlg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-13.165285240793068%26panoid%3DulH6fcEvZUCxOnDQnGWAlg%26yaw%3D135.03835375547365!7i16384!8i8192?coh=205410&entry=ttu"
+          }
+        >
+          Jl. Kuningan Mulia Boulevard, Kuningan Setiabudi, Jakarta 12940
+          Indonesia
+        </Link>
       </p>
     </div>
   );
 };
 
-const FooterLogo = ({ source, text }: { source: string; text: string }) => {
+const FooterLogo = ({
+  source,
+  text,
+  href,
+}: {
+  href: string;
+  source: string;
+  text: string;
+}) => {
   return (
     <div className="space-y-2">
       <p>{text}</p>
       <div className="relative h-[30px] w-full sm:h-[40px]">
-        <Image src={source} fill alt="Icon" />
+        <Link href={href}>
+          <Image src={source} fill alt="Icon" />
+        </Link>
       </div>
     </div>
   );

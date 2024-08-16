@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/firebase.js";
+import TagManager from "react-gtm-module";
 
 // Importing Button dynamically to disable SSR for this component
 const Button = dynamic(() => import("@/components/ComponentsButton"), {
@@ -36,6 +37,11 @@ const FormInput = () => {
       if (typeof window !== "undefined") {
         window.open(pdfUrl, "_blank");
       }
+      TagManager.dataLayer({
+        dataLayer: {
+          event: "InquireFooterForm",
+        },
+      });
     }
   };
 

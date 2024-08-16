@@ -7,7 +7,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Verde Two",
+  title: {
+    absolute: "",
+    default: "Verde Two",
+    template: "%s - Verde Two",
+  },
+  description:
+    "For leasing information, please contact us. Elegant and luxury living experience in Jakarta",
 };
 
 type RootLayoutProps = {

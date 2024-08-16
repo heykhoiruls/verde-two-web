@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import Button from "@/components/ComponentsButton";
-import Line from "@/components/ComponentsLine";
+import TagManager from "react-gtm-module";
 
 const contactInfo = {
   whatsapp: {
@@ -28,10 +28,18 @@ const generateContactUrl = (type: any, name: any) => {
 };
 const ComponentsInput = () => {
   const [name, setName] = useState("");
+
   const openContactUrl = useCallback(
     (type: any) => {
       const url = generateContactUrl(type, name);
-      if (url) window.location.href = url;
+      if (url) {
+        TagManager.dataLayer({
+          dataLayer: {
+            event: "ContactForm",
+          },
+        });
+        window.location.href = url;
+      }
     },
     [name],
   );
