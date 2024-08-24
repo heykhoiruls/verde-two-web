@@ -1,27 +1,32 @@
-import React, { useEffect } from "react";
-import ComponentsNavBottom from "@/components/ComponentsNavBottom";
+import { useEffect } from "react";
 
 const ChatButton = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-    script.type = "text/javascript";
-    script.onload = () => {
-      window.voiceflow.chat.load({
-        verify: { projectID: "6690e83a0b546ef70f50794b" },
-        url: "https://general-runtime.voiceflow.com",
-        versionID: "production",
-        autostart: true,
-      });
-    };
-    document.body.appendChild(script);
+    (function (d, t) {
+      const v = d.createElement(t) as HTMLScriptElement;
+      const s = d.getElementsByTagName(t)[0];
+
+      v.onload = function () {
+        window.voiceflow.chat.load({
+          verify: { projectID: "6690e83a0b546ef70f50794b" },
+          url: "https://general-runtime.voiceflow.com",
+          versionID: "production",
+          autostart: false,
+          assistant: {
+            stylesheet: "verde.css",
+          },
+        });
+      };
+
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
+      if (s && s.parentNode) {
+        s.parentNode.insertBefore(v, s);
+      }
+    })(document, "script");
   }, []);
 
-  return (
-    <button id="chat-button">
-      <ComponentsNavBottom src="/logos/chat.svg" />
-    </button>
-  );
+  return null;
 };
 
 export default ChatButton;

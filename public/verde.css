@@ -1,0 +1,15 @@
+.vfrc-widget.t-cSRoUT button.vfrc-launcher.c-bQoszf {
+  background-color: #013f24 !important;
+  display: hidden;
+}
+
+.vfrc-widget.t-cSRoUT button.vfrc-launcher.c-bQoszf:hover {
+  display: hidden;
+  background-color: #013f24 !important;
+}
+
+.vfrc-launcher img {
+  content: url("/logos/chat.svg");
+  height: 24px;
+  width: 24px;
+}

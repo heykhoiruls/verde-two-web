@@ -6,17 +6,6 @@ import GoUpperButton from "./GoUpperButton";
 import ChatButton from "./ChatButton";
 import ComponentsNavBottom from "@/components/ComponentsNavBottom";
 
-const SocialData = [
-  {
-    link: "https://www.youtube.com/channel/UCKA0OBv14C6pSNpb3pcNNOA",
-    logo: "logos/youtube.svg",
-  },
-  {
-    link: "https://www.instagram.com/verdetwo/",
-    logo: "logos/instagram.svg",
-  },
-];
-
 const SocialButton = ({ href, src }: { href: string; src: string }) => {
   return (
     <a href={href}>
@@ -36,18 +25,33 @@ const CallActionButton = () => {
       <div className="pointer-events-auto flex items-center rounded-full bg-black bg-opacity-35 p-2 text-white backdrop-blur-sm backdrop-filter">
         <div className="hidden items-center md:flex">
           <DirectionButton />
+
           <p className="px-5 text-sm">Inquire now</p>
         </div>
 
         <div className="bg-color-primary flex items-center rounded-full">
           <div className="flex items-center md:hidden">
             <DirectionButton />
+            <SocialButton
+              src="logos/instagram.svg"
+              href="https://www.instagram.com/verdetwo/"
+            />
           </div>
-          {SocialData.map((item, index) => (
-            <SocialButton key={index} href={item.link} src={item.logo} />
-          ))}
-          <WhatsAppButton />
+          <div className="hidden items-center md:flex">
+            <SocialButton
+              src="logos/instagram.svg"
+              href="https://www.instagram.com/verdetwo/"
+            />
+            <SocialButton
+              src="logos/youtube.svg"
+              href="https://www.youtube.com/channel/UCKA0OBv14C6pSNpb3pcNNOA"
+            />
+          </div>
+
+          {/* <WhatsAppButton /> */}
           <GoUpperButton />
+          <ChatButton />
+          {/* i want the position of the generate script was in here */}
         </div>
       </div>
     </motion.div>
