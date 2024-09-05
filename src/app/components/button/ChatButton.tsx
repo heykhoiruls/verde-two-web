@@ -11,7 +11,7 @@ const ChatButton = () => {
           verify: { projectID: "6690e83a0b546ef70f50794b" },
           url: "https://general-runtime.voiceflow.com",
           versionID: "production",
-          autostart: false,
+          autostart: true,
           assistant: {
             stylesheet: "verde.css",
           },
