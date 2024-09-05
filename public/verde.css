@@ -3,9 +3,13 @@
   display: hidden;
 }
 
+.vfrc-widget {
+  height: 100dvh;
+}
+
 .vfrc-widget.t-cSRoUT button.vfrc-launcher.c-bQoszf:hover {
   display: hidden;
-  background-color: #013f24 !important;
+  background-color: #f80000 !important;
 }
 
 .vfrc-launcher img {
