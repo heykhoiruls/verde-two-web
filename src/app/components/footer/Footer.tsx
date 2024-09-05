@@ -75,13 +75,19 @@ const FooterIcon = ({ source, link }: { source: string; link: string }) => {
 const FooterAddress = () => {
   return (
     <div className="pt-8">
-      <p>
-        T. <Link href={"https://wa.me/6287781181180"}>+62 877-8118-1180</Link>
-      </p>
-      <p className="pt-2">
-        E. <Link href={"mailto:info@verdetwo.com"}>info@verdetwo.com</Link>
-      </p>
-      <p className="pt-2 sm:max-w-[25vw]">
+      <FooterInfo
+        src={"/logos/whatsapp.svg"}
+        text={"+62 877-8118-1180"}
+        link={"https://wa.me/6287781181180"}
+      />
+      <FooterInfo
+        src={"/logos/mail-line.svg"}
+        text={"info@verdetwo.com"}
+        link={"mailto:info@verdetwo.com"}
+      />
+
+      <p className="flex gap-2 pt-2 text-xs sm:max-w-[25vw]">
+        <img className="h-4 w-4" src="/logos/map-pin.svg" alt="image" />
         <Link
           href={
             "https://www.google.com/maps/@-6.2136861,106.8339735,3a,75y,135.04h,103.17t/data=!3m7!1e1!3m5!1sulH6fcEvZUCxOnDQnGWAlg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-13.165285240793068%26panoid%3DulH6fcEvZUCxOnDQnGWAlg%26yaw%3D135.03835375547365!7i16384!8i8192?coh=205410&entry=ttu"
@@ -95,6 +101,29 @@ const FooterAddress = () => {
   );
 };
 
+const FooterInfo = ({
+  src,
+  text,
+  link,
+}: {
+  src: string;
+  text: string;
+  link: string;
+}) => {
+  return (
+    <>
+      <div className="mb-3 flex items-center gap-2">
+        <img className="h-4 w-4" src={src} alt="image" />
+        <Link href={link}>{text}</Link>
+      </div>
+    </>
+  );
+};
+{
+  /* <p className="pt-2">
+        E. <Link href={"mailto:info@verdetwo.com"}>info@verdetwo.com</Link>
+      </p> */
+}
 const FooterLogo = ({
   source,
   text,
